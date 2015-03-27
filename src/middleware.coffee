@@ -22,5 +22,6 @@ module.exports =
 
   couch: (req, resp, next) ->
     # add to the request a couch client tied to the logged in user
+    # TODO getting error `has no method 'nano_user'`
     req.couch = couch_utils.nano_user(req.session.user)
     return next()
