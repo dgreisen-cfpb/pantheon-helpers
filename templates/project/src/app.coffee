@@ -13,6 +13,9 @@ app = express()
 # set to 'application/json'
 app.use(bodyParser.json())
 
+# TODO this is required to set req.session.user
+app.use(session({secret: conf.SECRET_KEY, name: 'express_sess'}))
+
 # allow system user to login with basic auth
 # prohibit everything else
 # if conf.DEV == true (for testing), then
