@@ -24,7 +24,7 @@ task 'test', 'run all tests', (options) ->
     cmd = "./node_modules/istanbul/lib/cli.js cover ./node_modules/jasmine-node/bin/jasmine-node ./spec"
     cmd += if options.verbose then "--verbose " else ""
     cmd += " ./spec/"
-
+    console.log('Running test: ' + cmd)
     cp = exec(cmd)
     cp.stdout.pipe(process.stdout)
     cp.stderr.pipe(process.stderr)

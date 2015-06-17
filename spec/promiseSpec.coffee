@@ -5,6 +5,8 @@ _handleError = (done) ->
     done(err)
 
 describe 'resolveAll', () ->
+  it 'fails', () ->
+    expect(true).toEqual(false)
   it 'resolves successful promises to object with state==resolved', (done) ->
     Promise.resolveAll([Promise.resolve('success')]).then((resp) ->
       expect(resp).toEqual([{state:'resolved', value: 'success'}])
