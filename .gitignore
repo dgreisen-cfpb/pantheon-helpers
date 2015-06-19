@@ -38,4 +38,4 @@ coverage.xml
 bower_components/
 .grunt/
 /coverage
-/spec/**/*.js
+/spec/**/*.jspantheon-helpers.iml
