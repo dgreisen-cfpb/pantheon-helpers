@@ -3,6 +3,17 @@
 /lib/config_secret.js
 /src/config_secret.coffee
 
+# dev dependencies #
+#####################
+/node_modules/coffee-script
+/node_modules/jasmine-node
+/node_modules/istanbul
+
+# Testing #
+###########
+/coverage
+/spec/**/*.js
+
 # Compiled source #
 ###################
 *.com

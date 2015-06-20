@@ -356,6 +356,10 @@ should have no side effects.
 Because it is so easy, you should be writing a ton of tests.
 
 You run your tests with `cake test`.
+This will run all jasmine unit tests in the spec directory.
+It will also run a code coverage calculator.
+Your code coverage should be above 90%.
+
 You will be writing your tests using jasmine-node,
 so you will need to write tests against the [v1.3 api](http://jasmine.github.io/1.3/introduction.html).
 
@@ -366,8 +370,14 @@ The `Spec` postfix is needed so jasmine-node
 
 You should make liberal use of jasmine spys to mock and spy on external dependencies.
 
+
 There is already a .travis.yml file in your project skeleton.
-All you need to do is turn your repo on in travis-ci.
+You will need to enable your new repository in both [travis-ci.org] and [coveralls.io] before automated testing will work.
+Once automated testing is enabled, You should add badges to your README.md to display test status and code coverage:
+
+    [![Build Status](https://travis-ci.org/<OWNER>/<REPO>.svg?branch=master)](https://travis-ci.org/<OWNER>/<REPO>)
+
+    [![Coverage Status](https://coveralls.io/repos/<OWNER>/<REPO>/badge.svg)](https://coveralls.io/r/<OWNER>/<REPO>)
 
 ### 5. Implement CouchDB actions
 We will define our actions in `src/design_docs/boulder/lib/actions.coffee`.
